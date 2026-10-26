@@ -1,0 +1,34 @@
+LetMeCook/
+├── LetMeCookApp.swift
+│
+├── Features/
+│   ├── Home/
+│   │   ├── HomeView.swift
+│   │   └── HomeViewModel.swift
+│   │
+│   ├── MealDetail/
+│   │   ├── MealDetailView.swift 
+│   │   └── MealDetailViewModel.swift 
+│   │
+│   ├── Favorites/
+│   │   ├── FavoritesView.swift 
+│   │   └── FavoritesViewModel.swift 
+│   │
+│   └── Profile/
+│       └── ProfileView.swift 
+│
+├── Models/
+│   ├── FavoriteMeal.swift 
+│   ├── Meal.swift 
+│   └── MealResponse.swift 
+│
+├── Data/
+│   ├── MealAPIService.swift 
+│   ├── FavoriteManager.swift 
+│   └── PersistenceController.swift 
+│
+├── Components/
+│   ├── MealCardView.swift
+│   └── FloatingActionButton.swift
+│
+└── Assets.xcassets/ 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct LetMeCookApp: App {
@@ -13,5 +14,6 @@ struct LetMeCookApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(PersistenceController.sharedModelContainer)
     }
 }
