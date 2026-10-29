@@ -44,3 +44,11 @@ jobs:
             -parallel-testing-enabled NO \
             CODE_SIGNING_ALLOWED=NO \
             test
+
+      - name: Upload iOS Simulator Build
+        uses: actions/upload-artifact@v7
+        with:
+          name: LetMeCook-iOS-Simulator
+          path: ~/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/LetMeCook.app
+          if-no-files-found: error
+          retention-days: 7
