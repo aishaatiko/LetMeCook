@@ -1,4 +1,5 @@
-Let Me Cook
+## Let Me Cook
+
 Let Me Cook is an iOS recipe application built with SwiftUI. It allows users to discover meals, explore recipe details, search for recipes, and manage their favorite meals in one place.
 
 Features
