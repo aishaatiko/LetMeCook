@@ -1,4 +1,4 @@
-name: iOS Build
+name: iOS Build and Test
 
 on:
   push:
@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build iOS App
+  build-and-test:
+    name: Build and Test iOS App
     runs-on: macos-latest
 
     steps:
@@ -24,7 +24,7 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: Build for iOS Simulator
+      - name: Build iOS App
         run: |
           xcodebuild \
             -project LetMeCook.xcodeproj \
@@ -34,3 +34,13 @@ jobs:
             -destination 'generic/platform=iOS Simulator' \
             CODE_SIGNING_ALLOWED=NO \
             build
+
+      - name: Run Unit Tests
+        run: |
+          xcodebuild \
+            -project LetMeCook.xcodeproj \
+            -scheme LetMeCook \
+            -destination 'platform=iOS Simulator,name=iPhone 17 Pro' \
+            -parallel-testing-enabled NO \
+            CODE_SIGNING_ALLOWED=NO \
+            test
